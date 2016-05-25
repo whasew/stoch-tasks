@@ -1,0 +1,33 @@
+---
+title: "use of git"
+author: "Willi"
+date: "25 Mai 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# rstudio and git
+
+RStudio can’t create branches directly, so you need to either:
+
+- create them in GitHub and pull the changes in your repository;
+- create them from the Shell (Tools > Shell) and type git checkout -b new-branch
+
+
+```{r branch,eval=FALSE}
+system("git checkout -b survival")
+system("git push origin survival")
+```
+
+Close the window, and go back to the shell. There, type:
+
+git push origin proposed-fixes
+
+This command sends your modification to your fork on GitHub.
+
+git push origin proposed-fixes
+
+git remote -v
